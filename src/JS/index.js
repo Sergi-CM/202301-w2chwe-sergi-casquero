@@ -1,3 +1,6 @@
-import generateBoard from "./board/board.js";
+import generateBoard from "./board/generateBoard.js";
+import checkSurroundings from "./functions/checkSurroundings.js";
+import { boardRows, boardColumns } from "./globalVariables/globalVariables.js";
 
-console.log(generateBoard(10, 10));
+console.table(generateBoard(boardColumns, boardRows));
+checkSurroundings();
