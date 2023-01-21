@@ -2,9 +2,10 @@
   "name": "weekend02",
   "version": "1.0.0",
   "description": "",
-  "default": "index.js",
+  "default": "src/JS/index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "prebuild:dev": "rimraf dist/",
     "prebuild": "rimraf dist/",
     "build:dev": "parcel src/index.html",

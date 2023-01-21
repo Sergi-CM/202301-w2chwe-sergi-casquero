@@ -1,19 +1,26 @@
 class Cell {
-  width = 7;
-  height = 7;
+  isAlive;
   willBeAlive;
   xCoordinate;
   yCoordinate;
 
   constructor(gridX, gridY) {
-    this.gridX = gridX;
-    this.gridY = gridY;
-    this.isAlive = Math.random() > 0.4;
+    this.xCoordinate = gridX;
+    this.yCoordinate = gridY;
+    this.isAlive = Math.random() < 0.3;
   }
 
-  born() {}
+  born() {
+    this.willBeAlive = true;
+  }
 
-  kill() {}
+  kill() {
+    this.willBeAlive = false;
+  }
+
+  nextGeneration() {
+    this.isAlive = this.willBeAlive;
+  }
 }
 
 export default Cell;
