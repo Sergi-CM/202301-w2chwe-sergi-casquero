@@ -7,7 +7,7 @@ class Cell {
   constructor(xCoordinate, yCoordinate) {
     this.xCoordinate = xCoordinate;
     this.yCoordinate = yCoordinate;
-    this.isAlive = Math.random() < 0.1;
+    this.isAlive = Math.random() < 0.08;
   }
 
   born() {

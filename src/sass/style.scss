@@ -14,19 +14,55 @@ body {
   color: variables.$color-primary;
 }
 
-.game-board {
-  display: grid;
-  grid-template-columns: repeat(80, auto);
-  width: 720px;
-  aspect-ratio: 1/1;
-}
+.main-area {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 
-.square {
-  height: 9px;
-  width: 9px;
-  border: 1px solid variables.$color-grid;
-}
+  .board {
+    display: grid;
+    grid-template-columns: repeat(80, auto);
+    width: 720px;
+    aspect-ratio: 1/1;
 
-.alive {
-  background-color: variables.$color-primary;
+    &__square {
+      height: 9px;
+      width: 9px;
+      border: 1px solid variables.$color-grid;
+    }
+
+    .alive {
+      background-color: variables.$color-primary;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  button {
+    text-transform: uppercase;
+    font-family: inherit;
+    font-weight: 600;
+    padding: 10px;
+    width: 150px;
+    border: 2px solid variables.$color-primary;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: variables.$color-primary;
+      color: #fff;
+      box-shadow: 0px 3px 7px rgba($color: black, $alpha: 0.5);
+    }
+
+    &:active {
+      background-color: variables.$color-primary;
+      color: #fff;
+      transform: translateY(5px);
+    }
+  }
 }
