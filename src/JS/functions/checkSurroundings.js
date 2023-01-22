@@ -9,23 +9,23 @@ const checkSurroundings = (cell) => {
   const cellYCoord = cell.yCoordinate;
 
   const topBoundary = cellYCoord === 0 ? 0 : -1;
-  const rightBoundary = cellXCoord === boardColumns ? 0 : 1;
-  const bottomBoundary = cellYCoord === boardRows ? 0 : 1;
+  const rightBoundary = cellXCoord === boardColumns - 1 ? 0 : 1;
+  const bottomBoundary = cellYCoord === boardRows - 1 ? 0 : 1;
   const leftBoundary = cellXCoord === 0 ? 0 : -1;
 
   let aliveNeighbours = 0;
 
   for (
-    let row = cellYCoord + topBoundary;
-    row < cellYCoord + bottomBoundary;
-    row++
+    let column = cellYCoord + topBoundary;
+    column <= cellYCoord + bottomBoundary;
+    column++
   ) {
     for (
-      let column = cellXCoord + leftBoundary;
-      column < cellXCoord + rightBoundary;
-      column++
+      let row = cellXCoord + leftBoundary;
+      row <= cellXCoord + rightBoundary;
+      row++
     ) {
-      if (board[row][column].isAlive) {
+      if (board[column][row].isAlive) {
         aliveNeighbours++;
       }
     }
@@ -35,7 +35,9 @@ const checkSurroundings = (cell) => {
     aliveNeighbours--;
   }
 
-  return aliveNeighbours;
+  console.log(aliveNeighbours);
+
+  return aliveNeighbours === 3 || (cell.isAlive && aliveNeighbours === 2);
 };
 
 export default checkSurroundings;
