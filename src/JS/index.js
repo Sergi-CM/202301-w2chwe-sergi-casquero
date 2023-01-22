@@ -1,6 +1,6 @@
 import generateBoard from "./board/generateBoard.js";
-import nextGeneration from "./functions/nextGeneration.js";
+import generationLooper from "./functions/generationLooper.js";
 import { boardRows, boardColumns } from "./globalVariables/globalVariables.js";
 
-console.log(generateBoard(boardColumns, boardRows));
-nextGeneration();
+generateBoard(boardColumns, boardRows);
+generationLooper();

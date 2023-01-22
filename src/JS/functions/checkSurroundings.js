@@ -35,8 +35,6 @@ const checkSurroundings = (cell) => {
     aliveNeighbours--;
   }
 
-  console.log(aliveNeighbours);
-
   return aliveNeighbours === 3 || (cell.isAlive && aliveNeighbours === 2);
 };
 
