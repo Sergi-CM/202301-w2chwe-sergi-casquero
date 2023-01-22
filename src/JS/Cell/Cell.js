@@ -4,10 +4,10 @@ class Cell {
   xCoordinate;
   yCoordinate;
 
-  constructor(gridX, gridY) {
-    this.xCoordinate = gridX;
-    this.yCoordinate = gridY;
-    this.isAlive = Math.random() < 0.3;
+  constructor(xCoordinate, yCoordinate) {
+    this.xCoordinate = xCoordinate;
+    this.yCoordinate = yCoordinate;
+    this.isAlive = true;
   }
 
   born() {
