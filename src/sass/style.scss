@@ -18,13 +18,20 @@ body {
   display: flex;
   align-items: center;
   gap: 40px;
-  padding-left: 210px;
+  padding-left: 200px;
+
+  @media screen and (max-width: 1150px) {
+    flex-direction: column;
+    padding-left: 0;
+    margin-top: 60px;
+  }
 
   .board {
     display: grid;
     grid-template-columns: repeat(80, auto);
-    width: 720px;
+    width: 724px;
     aspect-ratio: 1/1;
+    border: 2px solid variables.$color-primary;
 
     &__square {
       height: 9px;
@@ -41,6 +48,12 @@ body {
     display: flex;
     flex-direction: column;
     gap: 60px;
+
+    @media screen and (max-width: 1150px) {
+      flex-direction: row;
+      padding-left: 0;
+      margin-top: 60px;
+    }
   }
 
   button {
