@@ -1,0 +1,14 @@
+@use "./reset";
+@use "./variables/variables";
+
+body {
+  background-color: variables.$color-background;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header {
+  text-align: center;
+}

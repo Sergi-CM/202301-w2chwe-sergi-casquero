@@ -5,4 +5,6 @@ const boardColumns = 5;
 
 const board = generateBoard(boardRows, boardColumns);
 
-export { boardRows, boardColumns, board };
+const body = document.querySelector("body");
+
+export { boardRows, boardColumns, board, body };
