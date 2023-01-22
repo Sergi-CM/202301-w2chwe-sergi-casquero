@@ -2,7 +2,7 @@
   "name": "weekend02",
   "version": "1.0.0",
   "description": "",
-  "main": "src/JS/index.js",
+  "default": "src/JS/index.js",
   "type": "module",
   "scripts": {
     "test": "jest",
