@@ -4,6 +4,7 @@ import checkSurroundings from "./checkSurroundings.js";
 const nextGeneration = () => {
   board.forEach((row) => {
     row.forEach((cell) => {
+      console.log(cell);
       if (checkSurroundings(cell)) {
         cell.born();
       } else {
