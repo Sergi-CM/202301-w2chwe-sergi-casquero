@@ -5,10 +5,28 @@ body {
   background-color: variables.$color-background;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 50px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .header {
   text-align: center;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(100, auto);
+  width: 700px;
+  aspect-ratio: 1/1;
+}
+
+.square {
+  height: 7px;
+  width: 7px;
+  border: 1px solid black;
+}
+
+.alive {
+  background-color: black;
 }
