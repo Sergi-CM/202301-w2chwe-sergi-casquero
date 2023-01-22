@@ -11,7 +11,7 @@ body {
 }
 
 .header {
-  text-align: center;
+  color: variables.$color-primary;
 }
 
 .game-board {
@@ -24,9 +24,9 @@ body {
 .square {
   height: 7px;
   width: 7px;
-  border: 1px solid black;
+  border: 1px solid variables.$color-grid;
 }
 
 .alive {
-  background-color: black;
+  background-color: variables.$color-primary;
 }
