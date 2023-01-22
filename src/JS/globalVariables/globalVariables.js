@@ -1,7 +1,7 @@
 import generateBoard from "../board/generateBoard.js";
 
-const boardRows = 100;
-const boardColumns = 100;
+const boardRows = 80;
+const boardColumns = 80;
 
 const board = generateBoard(boardRows, boardColumns);
 

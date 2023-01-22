@@ -1,4 +1,4 @@
-import { body } from "../globalVariables/globalVariables";
+import { body } from "../globalVariables/globalVariables.js";
 
 const header = () => {
   const header = document.createElement("h1");

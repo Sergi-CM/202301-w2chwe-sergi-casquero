@@ -1,10 +1,10 @@
-import { board } from "../globalVariables/globalVariables.js";
+import cellPrinter from "../uiGenerator/cellPrinter.js";
 import nextGeneration from "./nextGeneration.js";
 
 const generationLooper = () => {
   setInterval(() => {
-    console.log(board);
     nextGeneration();
+    cellPrinter();
   }, 200);
 };
 

@@ -3,13 +3,11 @@ class Cell {
   willBeAlive;
   xCoordinate;
   yCoordinate;
-  display;
 
   constructor(xCoordinate, yCoordinate) {
     this.xCoordinate = xCoordinate;
     this.yCoordinate = yCoordinate;
-    this.isAlive = Math.random() < 0.3;
-    this.display = this.isAlive ? "X" : " ";
+    this.isAlive = Math.random() < 0.1;
   }
 
   born() {

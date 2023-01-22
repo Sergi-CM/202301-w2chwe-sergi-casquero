@@ -16,14 +16,14 @@ body {
 
 .game-board {
   display: grid;
-  grid-template-columns: repeat(100, auto);
-  width: 700px;
+  grid-template-columns: repeat(80, auto);
+  width: 720px;
   aspect-ratio: 1/1;
 }
 
 .square {
-  height: 7px;
-  width: 7px;
+  height: 9px;
+  width: 9px;
   border: 1px solid variables.$color-grid;
 }
 
