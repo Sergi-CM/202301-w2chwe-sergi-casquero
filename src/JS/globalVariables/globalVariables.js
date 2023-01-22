@@ -1,8 +1,10 @@
 import generateBoard from "../board/generateBoard.js";
 
-const boardRows = 5;
-const boardColumns = 5;
+const boardRows = 80;
+const boardColumns = 80;
 
 const board = generateBoard(boardRows, boardColumns);
 
-export { boardRows, boardColumns, board };
+const body = document.querySelector("body");
+
+export { boardRows, boardColumns, board, body };

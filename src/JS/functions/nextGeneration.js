@@ -6,8 +6,10 @@ const nextGeneration = () => {
     row.forEach((cell) => {
       if (checkSurroundings(cell)) {
         cell.born();
+        cell.nextGeneration();
       } else {
         cell.kill();
+        cell.nextGeneration();
       }
     });
   });
